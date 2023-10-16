@@ -4,6 +4,8 @@ import styles from './welcome.style'
 import { useRouter } from 'expo-router'
 import { icons, SIZES } from '../../../constants'
 
+const jobTypes = ["Full-time", "Part-time", "Contractor"]
+
 const Welcome = () => {
   const router = useRouter();
   return (
@@ -30,6 +32,10 @@ const Welcome = () => {
               style={styles.searchBtnImage}
             />
           </TouchableOpacity>
+      </View>
+
+      <View style={styles.tabsContainer}>
+          <FlatList/>
       </View>
     </View>
   )
